@@ -1,0 +1,23 @@
+{{#extends 'base'}}
+{{#block 'content'}}
+
+<h1>Country</h1>
+{{!-- added the button for creating new country in db --}}
+<a href="/country/create" class="btn btn-primary">Add Country</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Country ID</th>
+            <th>Country</th>
+            <th>Last Update</th>
+        </tr>
+    </thead>
+    {{#each country}}
+    <tr>
+        <td>{{this.country_id}}</td>
+        <td>{{this.country}}</td>
+        <td>{{this.last_update}}</td>
+    </tr>
+    {{/each}}
+{{/block}}
+{{/extends}}

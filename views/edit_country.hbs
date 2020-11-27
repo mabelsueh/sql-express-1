@@ -1,0 +1,15 @@
+{{#extends 'base'}}
+{{#block 'content'}}
+<h1>Edit Country</h1>
+{{!-- add form & form method --}}
+<form method="post" class="form">
+    <div>
+    <label class="form=label">For ID {{country.country_id}} </label>
+    {{!-- need name for input to show when posted --}}
+    <input type="text" name="country" value={{country.country}} class="form-control">
+    </div>
+    {{!-- add submit type button with text create gray color and margin-top of value 3 --}}
+    <input type="submit" value="Update" class="btn btn-secondary mt-3"/>
+</form>
+{{/block}}
+{{/extends}}
